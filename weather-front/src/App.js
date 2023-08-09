@@ -1,40 +1,21 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState } from "react";
+import WeatherForm from "./WeatherForm";
+import WeatherDisplay from "./WeatherDisplay";
 
-function App() {
+const App = () => {
+  const [weatherData, setWeatherData] = useState(null);
+
+  const handleWeatherData = (data) => {
+    setWeatherData(data);
+  };
+
   return (
-    <div className="App">
-      <div className="center-column">
-        <div className="item-row">
-          <span>Create Django Project</span>
-        </div>
-
-        <div className="item-row">
-          <span>Create React app: "npx create-react-app appname"</span>
-        </div>
-
-        <div className="item-row">
-          <span>Drag react app into root directory of django project</span>
-        </div>
-
-        <div className="item-row">
-          <span>Configure TEMPALTES engine</span>
-        </div>
-
-        <div className="item-row">
-          <span>Configure URL path</span>
-        </div>
-
-        <div className="item-row">
-          <span>Configure static files</span>
-        </div>
-
-        <div className="item-row">
-          <span>cd into react app and run "npm run build"</span>
-        </div>
-      </div>
+    <div>
+      <h1>Weather App</h1>
+      <WeatherForm onWeatherData={handleWeatherData} />
+      <WeatherDisplay weatherData={weatherData} />
     </div>
   );
-}
+};
 
 export default App;
