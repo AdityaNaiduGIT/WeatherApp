@@ -60,6 +60,7 @@ TEMPLATES = [
         "DIRS": [
             os.path.join(BASE_DIR , 'weather-front/build'),
             os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'frontend', 'build'),
         ],
         "APP_DIRS": True,
         "OPTIONS": {
