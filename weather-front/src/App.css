@@ -1,5 +1,5 @@
 body {
-  background-color: #282c34;
+  background-color: #999999;
 }
 
 .center-column {
@@ -11,6 +11,12 @@ body {
   box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 0.75);
 }
 
+.center-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .item-row {
   background-color: #11a5c0;
   margin: 10px;
@@ -20,4 +26,22 @@ body {
   font-size: 18px;
   font-weight: 900px;
   box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 0.75);
+}
+
+.float{
+  float: left;
+}
+
+/* h1,h3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+h3{
+  color: #000000;
+}
+
+.margin{
+  margin: 20px;
 }

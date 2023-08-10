@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './App.css'
 
 const WeatherForm = ({ onWeatherData }) => {
   const [city, setCity] = useState("");
@@ -16,15 +17,19 @@ const WeatherForm = ({ onWeatherData }) => {
   };
 
   return (
-    <div>
+    <div className="center-align">
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter city name"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-        <button type="submit">Get Weather</button>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">🔍</span>
+          <input type="text"
+            class="form-control"
+            placeholder="Enter city name"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+            value={city}
+            onChange={(e) => setCity(e.target.value)} />
+        </div>
+        <button type="submit" className="btn btn-secondary m-3">Get Weather</button>
       </form>
     </div>
   );
