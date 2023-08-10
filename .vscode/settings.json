@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/297b354e-6da9-4a50-a24e-c55510472077/resourceGroups/WebAppDjango/providers/Microsoft.Web/sites/weather-app-django",
+  "appService.deploySubpath": "."
+}
