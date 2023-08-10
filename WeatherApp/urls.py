@@ -23,8 +23,8 @@ from .views import get_weather
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # path('', TemplateView.as_view(template_name='index.html')),
-    re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
+    path('', TemplateView.as_view(template_name='index.html')),
+    # re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
     path('api/weather/', get_weather, name='get-weather'),
     
 ]
